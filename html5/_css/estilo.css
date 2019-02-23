@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+body {
+    background: url("../_imagens/fundo.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #000000;
+}
+
+div#interface {
+    width: 1400px;
+    background-color: #ffffff;
+    margin: -10px auto 0 auto;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0.5);
+}
+img#icone {
+    position: absolute;
+    right: 220px;
+    top: 75px;
+}
+
+/*Estilizando o cabeçalho*/
+header#Cabecalho {
+    border-bottom: 1px #606060 solid; /*Acrescenta a linha divisoria do cabeçalho*/
+    height: 150px; /*Tamanho do header, onde sera apresentado a linha divisoria*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;/*Imagem a ser apresentada no logo*/
+}
+
+/*Trabalhando com as fontes do cabeçalho*/
+header#Cabecalho h1 {
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    color: blue;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.5 );
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#Cabecalho h2 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    padding: 0px;
+    margin-top: 0px;
+}
+/*Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+    position: relative;/*Tenho que deixare a posição relativa pois se não o figcaption se perde na pagina*/
+    border: 8px solid white;/**/
+    box-shadow: 1px 1px 4px black;/*sombra( horizontal, vertical, espalhamento, cor*/
+}
+
+figure.foto-legenda img {
+    width: 100%;/*largura da imagem*/
+    height: 100%;/*altura da imagem*/
+}
+
+figure.foto-legenda figcaption{
+    opacity: 0;/*A figcaption com opacidade em 0 esconde a frase na imagem, se eu fracionar a opacidade ela sobrepõe a imagem*/
+    position: absolute;/*Aqui eu estou impondo uma posição ao figcaption no caso Absoluto, ele é um objeto filho do figure img*/
+    top: 0px;/**/
+    background-color: rgba(0,0,0,.4);/*rgba (red, green, blue, alpha-opacity)*/
+    color: white;/*faz a letra da legenda ficar branca*/
+    width: 100%;/*largura do figcaption faz com que o background-color ocupe toda a imagem em largura*/
+    height: 100%;/*altura do figcaption faz com que o background-color ocupe toda a imagem em altura*/
+    padding: 10px;/*Cria um espaço entre a borda e o background-color*/
+    box-sizing: border-box;/*cria um box dentro da borda*/
+    transition: opacity 1.5s;/*Aqui defino o tempo da transição da frase ou seja o tempo que ela demora para aparecer*/
+}
+/*hover cria o efeito do texto aparecer apenas quando eu passar o mouse por cima da imagem*/
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+/*Formatação do Menu*/
+
+nav#menu {
+    display: block; /*Uso para fazer o menu flutuar na tela do site*/
+}
+
+nav#menu ol{ /*Declaramos em qual trabalharemos, nesse caso "ol"*/
+    list-style: none; /*Some com as marcações do menu*/
+    text-transform: uppercase; /*Transforma todas as letras do menu em maiusculas ao menos as que forem ul*/
+    position: absolute; /*Usamos para fazer o menu flutuar pelo site*/
+    top: 5px; /*Uso para fazer o menu subir ao topo da pagina*/
+    right: 250px; /*Uso para escolher a posição da pagina*/;
+}
+
+nav#menu li { /*Declaramos em qual trabalharemos, nesse caso "li"*/
+    display: inline-block; /*Faremos o menu ficar na mesma linha*/
+    background-color: darkgrey; /*Usamos para colocar cor no fundo da lista*/
+    padding: 10px ; /*Usamos para aumentar o espaçamento entre a lista*/
+    margin: 10px; /*Usamos para aumentar o espaço entre os botões de uma borda a outra*/
+    transition: background-color 1s; /*Aqui defino o tempo da transição da frase ou seja o tempo que ela demora para aparecer*/
+}
+
+nav#menu li:hover { /*Muda a cor do botão do menu quando o mouse passa por cima*/
+    background-color: #606060; /**/
+}
+
+nav#menu h1 { /*Declaramos que iremos trabalhar no menu principal oque esta entre h1*/
+   display: none;
+}
+
+nav#menu a { /*Muda a cor da letra do menu*/
+    color: black; /*muda a cor da letra do botão do menu*/
+    text-decoration: none; /**/
+}
+
+nav#menu a:hover { /*Muda a cor da letra do menu quando o mouse passa por cima*/
+    color: white; /*Cor da letra quando o mouse tiver em cima do botão menu*/
+    text-decoration: underline; /*Vai fazer a linha embaixo da letra do menu*/
+}
+
